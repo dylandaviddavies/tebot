@@ -31,7 +31,7 @@ client.on('message', async (target, ctx, msg, self) => {
 
     const message = msg.replace(FULL_COMMAND_REGEX, '')?.trim();
 
-    await command.execute({client, context: ctx, target, message})
+    await command({client, context: ctx, target, message})
 });
 
 await client.connect();
